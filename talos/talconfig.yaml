@@ -44,7 +44,6 @@ nodes:
           kernel:
             modules:
               - name: i915
-              - name: intel-ucode
               - name: mei
 
 # Global patches
