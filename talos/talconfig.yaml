@@ -4,10 +4,10 @@ clusterName: kubernetes
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
 
-endpoint: https://192.168.2.238:6443
+endpoint: https://192.168.1.238:6443
 additionalApiServerCertSans: &sans
   - "127.0.0.1"
-  - "192.168.2.238"
+  - "192.168.1.238"
 additionalMachineCertSans: *sans
 
 clusterPodNets: ["10.42.0.0/16"]
@@ -19,7 +19,7 @@ cniConfig:
 
 nodes:
   - hostname: "basgiath"
-    ipAddress: "192.168.2.238"
+    ipAddress: "192.168.1.238"
     installDisk: "/dev/nvme0n1"
     machineSpec:
       secureboot: false
@@ -30,13 +30,13 @@ nodes:
           hardwareAddr: "9c:6b:00:ac:ab:85"
         dhcp: false
         addresses:
-          - "192.168.2.238/24"
+          - "192.168.1.238/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.2.1"
+            gateway: "192.168.1.1"
         mtu: 1500
         vip:
-          ip: "192.168.2.238"
+          ip: "192.168.1.238"
     patches:
       - # Load kernel modules
         |-
