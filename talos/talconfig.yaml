@@ -10,8 +10,8 @@ additionalApiServerCertSans: &sans
   - "192.168.1.138"
 additionalMachineCertSans: *sans
 
-clusterPodNets: ["192.168.1.192/27"]
-clusterSvcNets: ["192.168.1.224/27"]
+clusterPodNets: ["10.42.0.0/16"]
+clusterSvcNets: ["10.43.0.0/16"]
 
 # Disable built-in CNI to use Cilium
 cniConfig:
@@ -23,7 +23,7 @@ nodes:
     installDisk: "/dev/nvme1n1"
     machineSpec:
       secureboot: false
-    talosImageURL: factory.talos.dev/installer/039535a70c3bd1667c355eca78571267704e55c8a24785033d183b8f26e39d82
+    talosImageURL: factory.talos.dev/installer/b7702dcc9325d40db023b174e7afce05fa626558850701db8658572357135058
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
