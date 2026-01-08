@@ -10,8 +10,8 @@ additionalApiServerCertSans: &sans
   - "192.168.1.238"
 additionalMachineCertSans: *sans
 
-clusterPodNets: ["10.42.0.0/16"]
-clusterSvcNets: ["10.43.0.0/16"]
+clusterPodNets: ["192.168.1.192/27"]
+clusterSvcNets: ["192.168.1.224/27"]
 
 # Disable built-in CNI to use Cilium
 cniConfig:
@@ -33,7 +33,7 @@ nodes:
           - "192.168.1.238/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.1.1"
+            gateway: "192.168.1.238"
         mtu: 1500
         vip:
           ip: "192.168.1.238"
