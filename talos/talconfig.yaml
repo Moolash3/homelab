@@ -19,7 +19,7 @@ cniConfig:
 
 nodes:
   - hostname: "basgiath"
-    ipAddress: "192.168.1.238"
+    ipAddress: "192.168.1.239"
     installDisk: "/dev/nvme0n1"
     machineSpec:
       secureboot: false
@@ -30,7 +30,7 @@ nodes:
           hardwareAddr: "9c:6b:00:ac:ab:85"
         dhcp: false
         addresses:
-          - "192.168.1.238/24"
+          - "192.168.1.239/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "192.168.1.1"
