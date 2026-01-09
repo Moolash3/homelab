@@ -20,7 +20,7 @@ cniConfig:
 nodes:
   - hostname: "basgiath"
     ipAddress: "192.168.1.138"
-    installDisk: "/dev/nvme1n1"
+    installDisk: "/dev/nvme2n1"
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/b7702dcc9325d40db023b174e7afce05fa626558850701db8658572357135058
@@ -36,7 +36,7 @@ nodes:
             gateway: "192.168.1.1"
         mtu: 1500
         vip:
-          ip: "192.168.1.138"
+          ip: "192.168.1.200"
     patches:
       - # Load kernel modules
         |-
